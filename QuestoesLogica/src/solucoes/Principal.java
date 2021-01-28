@@ -5,9 +5,10 @@ import java.text.ParseException;
 /**
  * @author Gabriel C. S. Silva
  * 
- * Obs: Utilizar esta classe principal para teste e execução dos métodos 
+ * Classe principal para teste e execução dos métodos 
  * criados para resulução das questões propostas.
  *
+ * Os métodos para teste estão sendo chamados, basta remover os comentários.
  */
 
 public class Principal {
@@ -15,8 +16,8 @@ public class Principal {
         Questoes questoes = new Questoes();
         
         //Testando Questão 1.1
-        //questoes.CalcularFatorial(5);// 120
-        //questoes.CalcularFatorial(-5);// 1
+        questoes.CalcularFatorial(5);// 120
+        questoes.CalcularFatorial(-5);// 1
         
         //Testando Questão 1.2
         //questoes.CalcularPremio(100, "vip");// 120
@@ -58,23 +59,23 @@ public class Principal {
         //questoes.TransformarEmMatriz("1,2,3,4,5,6"); // {1, 2}, {3, 4}, {5, 6}
         
         //Testando Questão 1.10
-        int[] vetor1 = new int[] { 1,2,3,4,5 };
-        int[] vetor2 = new int[] { 1,2,5 };
-        questoes.ObterElementosFaltantes(vetor1, vetor2);//{ 3, 4 };
+        //int[] vetor1 = new int[] { 1,2,3,4,5 };
+        //int[] vetor2 = new int[] { 1,2,5 };
+        //questoes.ObterElementosFaltantes(vetor1, vetor2);//{ 3, 4 };
         
         // faltam elementos no vetor3
-        int[] vetor3 = new int[] { 1,4,5 };
-        int[] vetor4 = new int[] { 1,2,3,4,5 };
-        questoes.ObterElementosFaltantes(vetor3, vetor4);// { 2, 3 };
+        //int[] vetor3 = new int[] { 1,4,5 };
+        //int[] vetor4 = new int[] { 1,2,3,4,5 };
+        //questoes.ObterElementosFaltantes(vetor3, vetor4);// { 2, 3 };
 
         // faltam elementos em ambos vetores
-        int[] vetor5 = new int[] { 1,2,3,4 };
-        int[] vetor6 = new int[] { 2,3,4,5 };
-        questoes.ObterElementosFaltantes(vetor5, vetor6);// { 1, 5 };
+        //int[] vetor5 = new int[] { 1,2,3,4 };
+        //int[] vetor6 = new int[] { 2,3,4,5 };
+        //questoes.ObterElementosFaltantes(vetor5, vetor6);// { 5, 1 };
 
         // não faltam items
-        int[] vetor7 = new int[] { 1,3,4,5 };
-        int[] vetor8 = new int[] { 1,3,4,5 };
-        questoes.ObterElementosFaltantes(vetor7, vetor8);// { };
+        //int[] vetor7 = new int[] { 1,3,4,5 };
+        //int[] vetor8 = new int[] { 1,3,4,5 };
+        //questoes.ObterElementosFaltantes(vetor7, vetor8);// { };
     }
 }

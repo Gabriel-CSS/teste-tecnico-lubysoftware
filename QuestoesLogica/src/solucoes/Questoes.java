@@ -1,6 +1,5 @@
 package solucoes;
 
-import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -124,7 +123,7 @@ public class Questoes {
     */
     
     public String CalcularValorComDescontoFormatado(String valorS, String descontoS){
-        double valor = 0, desconto = 0;
+        double valor, desconto;
         
         valorS = valorS.substring(3);
         valorS = valorS.replace(".", "");
@@ -173,7 +172,6 @@ public class Questoes {
         }
         
         int pares[] = new int[arrPares.size()];
-        //pares = arrPares.toArray(pares);
         
         for(i=0; i<arrPares.size(); i++){
             pares[i] = arrPares.get(i);
@@ -252,15 +250,25 @@ public class Questoes {
     public int[] ObterElementosFaltantes(int vetor1[], int vetor2[]){
         
         ArrayList <Integer> arrFaltando = new ArrayList<>();
-        int i, aux=0;
+        ArrayList <Integer> arr1 = new ArrayList<>();
+        ArrayList <Integer> arr2 = new ArrayList<>();
+        
+        int i, j;
         
         for(i=0; i<vetor1.length; i++){
-            for(int j=0; j<vetor2.length; j++){
-                if(vetor1[i] == vetor2[j]) aux=1;
-                break;
-            }
-            if(aux == 0) arrFaltando.add(vetor1[i]);
-            aux = 0;
+            arr1.add(vetor1[i]);
+        }
+        
+        for(i=0; i<vetor2.length; i++){
+            if(!arr1.contains(vetor2[i])) arrFaltando.add(vetor2[i]);
+        }
+        
+        for(i=0; i<vetor2.length; i++){
+            arr2.add(vetor2[i]);
+        }
+        
+        for(i=0; i<vetor1.length; i++){
+            if(!arr2.contains(vetor1[i])) arrFaltando.add(vetor1[i]);
         }
         
         int vetFaltando[] = new int[arrFaltando.size()];
