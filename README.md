@@ -25,4 +25,7 @@ e o outro para mostrar uma simples lista contendo as bebidas, seus preços e sua
 
 ### O programa foi feito em Java, utilizando conceitos de orientação a objetos.
 
+### A execução do programa pode ser feita compilando e executando o mesmo no NetBeans ou,
+### executando o arquivo MaquinaDeVenda.jar que fica na pasta dist
+
 😃👨‍💻
